@@ -1,0 +1,71 @@
+
+body{
+    background-color:rgba(0, 0, 0, 0.88);
+}
+header{
+    display: flex;
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+}
+header a img{
+    width: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: -60px;
+}
+header h2{
+    font-size: 24pt;
+    color: white;
+    text-align: center;
+    margin: auto;
+    
+}
+.perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+    padding: 30px;
+}
+.perfil img{
+    width: 100px;
+    margin-bottom: 20px;
+}
+.perfil .texts{
+   text-align: center;
+
+}
+.perfil .texts h3{
+    color: white;
+    margin-bottom: 8px;
+}
+.perfil .texts span{
+    color: white;
+
+}
+.servico_card{
+border-bottom: 1px solid rgb(163, 163, 163);
+padding: 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.textServico h2{
+     font-size: 17pt;
+     margin-bottom: 6px;
+     color: rgb(255, 255, 255);
+}
+.textServico span{
+    color: blue;
+    font-weight: 500;
+}
+button{
+    padding: 15px 20px;
+    border: none;
+    background-color: blue;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 15pt;
+}

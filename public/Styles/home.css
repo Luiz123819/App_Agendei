@@ -1,0 +1,118 @@
+body{
+    background-color:rgba(0, 0, 0, 0.88);
+}
+
+.container {
+
+    padding: 20px;
+    height: calc(100vh - 100px);
+
+}
+
+.logo {
+    width: 170px;
+
+    margin: auto;
+    position: relative;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+    margin-bottom: 20px;
+    
+}
+
+.subtitle {
+    margin-top: 30px;
+    text-align: start;
+    margin-bottom: 30px;
+    font-size: 14pt;
+    font-weight: 500;
+    color: var(---color--02--);
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin-bottom:100px;
+   padding-bottom:100px;
+}
+
+.card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color:rgb(36, 36, 36);
+    padding: 20px;
+  gap:40px;
+   
+    cursor: pointer;
+    position:relative;
+}
+
+.card:hover {
+    transform: scaleY(1.1) scaleX(1.001);
+    background-color: rgba(17, 17, 17, 0.8);
+}
+
+.card img {
+    width: 70px;
+  
+}
+.agendar{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    
+    text-decoration:none;
+      background-color:blue;
+      color:white;
+      font-size:14pt;
+      font-weight:600;
+      padding:10px;
+      cursor:pointer;
+    }
+.card h3 {
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.card span {
+    margin-top:10px;
+    color: #007bff;
+}
+
+header {
+
+    position: fixed;
+    bottom: 0;
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(19, 19, 19);
+    height: 80px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.menu_item {
+    font-size: 30pt;
+    color: rgba(49, 49, 49, 0.6);
+}
+
+.iconcolor {
+    color: blue;
+}
