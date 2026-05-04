@@ -130,3 +130,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+  window.addEventListener('load', () => {
+    const loader = document.getElementById('pwa-loader');
+    const content = document.getElementById('main-content');
+
+    // Esconde o skeleton e mostra o conteúdo real
+    if (loader && content) {
+      loader.style.display = 'none';
+      content.style.display = 'block';
+    }
+  });

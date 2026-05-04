@@ -22,9 +22,9 @@ header{
 }
 .nav-bar h3{
 margin-left: 40px;
-  font-size: 17pt;
+  font-size: 20pt;
   font-weight: 600;
-  color: var(---color--03--);
+  color: var(--accent-blue);
   width: 100%;
 }
 .nav-bar img{
@@ -33,7 +33,7 @@ margin-left: 40px;
 .calendar {
   width: 350px;
   margin: 20px auto;
-  border: 1px solid #ccc;
+  border: 1px solid var(--bg-dark);
   border-radius: 8px;
   overflow: hidden;
   font-family: Arial, sans-serif;
@@ -46,7 +46,7 @@ margin-left: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #004cff;
+  background: var(--accent-blue);
   color: white;
   padding: 10px;
 }
@@ -54,20 +54,20 @@ form button{
   width:30px;
   font-size:18pt;
   color:white;
-  background-color:blue;
+  background-color:var(--accent-blue);
   border:none;
 }
 .weekdays, .days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   text-align: center;
-  color:white;
+  color:var(--text-main);
 }
 
 .weekdays div {
   font-weight: bold;
   padding: 5px;
-  background: #000000;
+  background: var(--bg-card);
 }
 
 .days div {
@@ -78,6 +78,7 @@ form button{
 
 .days div:hover {
   background: #0a0a0a;
+  color:var(--accent-blue)
 }
 
 .days .selected {
@@ -104,18 +105,21 @@ p{
   flex-direction: column;
   width: 100%;
   color:white;
+  
 }
 .agendando-com{
   color:rgb(219, 219, 219);
-  
+  font-size: 16pt;
+  display: flex;
 }
 .agendando-com strong{
-  color:yellow;
+  color:var(--accent-blue);
+   font-size: 16pt;
 }
 div label{
   font-size: 18pt;
   font-weight: 500;
-  color: rgb(228, 228, 228);
+  color: var(--text-muted);
 }
 div select{
 
@@ -139,7 +143,7 @@ button.agendar{
   width: 100%;
   padding: 15px;
   margin-top: 60px;
-  background: var(---color--03--);
+  background: var(--accent-blue);
   color: white;
   font-size: 17pt;
   font-weight: 600;

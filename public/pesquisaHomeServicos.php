@@ -7,15 +7,14 @@ try {
         session_start();
     }
 
-    
-    $id = $_GET['medico'] ?? ''; 
-      echo $id;
-    
+
+    $id = $_GET['medico'] ?? '';
+ 
+
     $query = "SELECT id_medico, nome, especialidade, foto FROM medicos WHERE id_medico = ?";
-    
+
     $stmt = $conn->prepare($query);
-    
-    // 4. Passa o ID para o execute
+
     $stmt->execute([$id]);
 
     $medico = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -23,8 +22,6 @@ try {
     if (!$medico) {
         echo "Médico não encontrado no banco de dados.";
     }
-
-} catch(PDOException $e) {
+} catch (PDOException $e) {
     echo "Erro ao carregar médico: " . $e->getMessage();
 }
-?>

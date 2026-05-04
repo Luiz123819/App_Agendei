@@ -39,6 +39,7 @@
         border-radius: 5px;
         background-color: rgb(36, 36, 36);
         font-size:15pt;
+        color:white;
     }
 
     input::placeholder {
@@ -56,7 +57,7 @@
         width: 300px;
         height: 50px;
         border: none;
-        background-color: var(---color--03--);
+        background-color: var(--accent-blue);
         color: white;
         font-size: 15pt;
         cursor: pointer;
@@ -69,7 +70,7 @@
 }
 
 .container p {
-    color: var(---color--02--);
+    color: var(--text-muted);
 }
 
 .container p a {

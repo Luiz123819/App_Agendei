@@ -1,28 +1,24 @@
 const CACHE_NAME = 'agendei-v1';
-const ASSETS_TO_CACHE = [
-  'home.php',
-  'index.php',
-  'Styles/style.css',
-  'Styles/home.css',
-  'manifest.json',
-  'icon-192.png',
-  'icon-512.png'
+// Coloque APENAS arquivos que você tem CERTEZA que existem no servidor
+const assets = [
+  '/',
+  'index.php' // Remova caminhos de imagens ou CSS que possam estar errados por enquanto
 ];
 
-// Instalação e Cache
-self.addEventListener('install', event => {
-  event.waitUntil(
+self.addEventListener('install', e => {
+  e.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(ASSETS_TO_CACHE);
-    })
+      return cache.addAll(assets);
+    }).catch(err => console.log("Erro de cache ao instalar: ", err))
   );
 });
 
-// Estratégia: Tenta Rede, se falhar (offline), tenta Cache
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    fetch(event.request).catch(() => {
-      return caches.match(event.request);
+self.addEventListener('fetch', e => {
+  e.respondWith(
+    caches.match(e.request).then(res => {
+      return res || fetch(e.request);
+    }).catch(() => {
+        // Se falhar o fetch (ex: offline), não trava o app
     })
   );
 });

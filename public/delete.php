@@ -8,12 +8,12 @@ if (isset($_GET['id']) && isset($_SESSION['id_user'])) {
     $user_id = $_SESSION['id_user'];
 
     try {
-       
+
         $sql = "DELETE FROM agendamentos WHERE id_agendamentos = ? AND usuario_id = ?";
         $stmt = $conn->prepare($sql);
 
         if ($stmt->execute([$id_reserva, $user_id])) {
-           
+
             header("Location: minhasReservas.php?status=deletado");
             exit;
         } else {
@@ -23,7 +23,7 @@ if (isset($_GET['id']) && isset($_SESSION['id_user'])) {
         die("Erro no banco de dados: " . $e->getMessage());
     }
 } else {
-  
+
     header("Location: login.php");
     exit;
 }
