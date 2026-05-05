@@ -1,0 +1,26 @@
+{
+  "name": "Agendei - Consultas",
+  "short_name": "Agendei",
+  "description": "Agende suas consultas médicas de maneira facilitada",
+  "lang": "pt-BR",
+  "start_url": "index.php",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#007bff",
+  "orientation": "any",
+  "scope": "/",
+  "categories": ["medical", "utilities"],
+  "icons": [
+    {
+      "src": "Images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "Images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
